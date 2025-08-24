@@ -1,0 +1,88 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ragfusion"
+version = "0.1.0"
+description = "A unified RAG framework with seamless switching between vector stores"
+readme = "README.md"
+authors = [
+    {name = "Your Name", email = "your.email@example.com"}
+]
+license = {text = "MIT"}
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+]
+requires-python = ">=3.8"
+dependencies = [
+    "numpy>=1.21.0",
+    "pydantic>=2.0.0",
+    "python-dotenv>=0.19.0",
+    "tenacity>=8.0.0",
+    "tqdm>=4.65.0",
+]
+
+[project.optional-dependencies]
+chromadb = [
+    "chromadb>=0.4.0",
+]
+faiss = [
+    "faiss-cpu>=1.7.4",
+]
+faiss-gpu = [
+    "faiss-gpu>=1.7.4",
+]
+embeddings = [
+    "sentence-transformers>=2.2.0",
+    "openai>=1.0.0",
+    "cohere>=4.0.0",
+]
+all = [
+    "chromadb>=0.4.0",
+    "faiss-cpu>=1.7.4",
+    "sentence-transformers>=2.2.0",
+    "openai>=1.0.0",
+    "cohere>=4.0.0",
+]
+dev = [
+    "pytest>=7.0.0",
+    "pytest-asyncio>=0.21.0",
+    "black>=23.0.0",
+    "isort>=5.12.0",
+    "mypy>=1.0.0",
+    "flake8>=6.0.0",
+    "pre-commit>=3.0.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/yourusername/ragfusion"
+Documentation = "https://ragfusion.readthedocs.io"
+Repository = "https://github.com/yourusername/ragfusion"
+Issues = "https://github.com/yourusername/ragfusion/issues"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["ragfusion*"]
+exclude = ["tests*"]
+
+[tool.black]
+line-length = 88
+target-version = ['py38', 'py39', 'py310', 'py311']
+
+[tool.isort]
+profile = "black"
+line_length = 88
+
+[tool.mypy]
+python_version = "3.8"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
