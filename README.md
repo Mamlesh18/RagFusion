@@ -4,36 +4,6 @@
 
 A unified RAG (Retrieval-Augmented Generation) framework that provides seamless switching between vector stores while adding powerful RAG-specific features.
 
-## Features
-
-- **🔄 Seamless Store Switching**: Switch between ChromaDB and FAISS with a single line of code
-- **🎯 Native Feature Preservation**: Use 100% of each vector store's native capabilities
-- **➕ RAG Enhancements**: Automatic chunking, embedding management, reranking, and hybrid search
-- **📦 Zero Lock-in**: Easy migration between vector stores
-- **⚡ Production Ready**: Optimized for performance with caching and batching
-- **🔧 Highly Configurable**: Fine-tune every aspect of the RAG pipeline
-
-## Installation
-
-```bash
-# Basic installation
-pip install ragfusion
-
-# With ChromaDB support
-pip install ragfusion[chromadb]
-
-# With FAISS support (CPU)
-pip install ragfusion[faiss]
-
-# With FAISS support (GPU)
-pip install ragfusion[faiss-gpu]
-
-# With embedding models
-pip install ragfusion[embeddings]
-
-# Everything
-pip install ragfusion[all]
-```
 
 ## Quick Start
 
