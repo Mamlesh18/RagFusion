@@ -158,9 +158,3 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 MIT License - see LICENSE file for details.
 
-## Support
-
-- Documentation: [https://ragfusion.readthedocs.io](https://ragfusion.readthedocs.io)
-- Issues: [GitHub Issues](https://github.com/yourusername/ragfusion/issues)
-- Discussions: [GitHub Discussions](https://github.com/yourusername/ragfusion/discussions)
-"""

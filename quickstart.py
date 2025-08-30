@@ -2,7 +2,6 @@
 quickstart.py
 Quick demonstration of RAGFusion capabilities.
 """
-                    
 from ragfusion import chromadb, faiss, configure
 
 def quickstart():
